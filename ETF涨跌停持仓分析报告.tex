@@ -1,0 +1,313 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[UTF8]{ctex}
+\usepackage{geometry}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{colortbl}
+\usepackage{fancyhdr}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{amsmath}
+\usepackage{multirow}
+
+% 页面设置
+\geometry{left=2.5cm,right=2.5cm,top=2.5cm,bottom=2.5cm}
+
+% 页眉页脚
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small 上交所股票型ETF涨跌停持仓分析}
+\fancyhead[R]{\small 2026年2月5日}
+\fancyfoot[C]{\thepage}
+
+% 标题格式
+\titleformat{\section}{\large\bfseries}{\thesection}{1em}{}
+\titleformat{\subsection}{\normalsize\bfseries}{\thesubsection}{1em}{}
+
+% 颜色定义
+\definecolor{upcolor}{RGB}{220,50,50}
+\definecolor{downcolor}{RGB}{50,150,50}
+\definecolor{headercolor}{RGB}{240,240,240}
+\definecolor{lightgray}{RGB}{250,250,250}
+
+\begin{document}
+
+% 标题页
+\begin{titlepage}
+\centering
+\vspace*{3cm}
+{\Huge\bfseries 上交所股票型ETF\\[0.5cm]涨跌停持仓分析报告}\\[2cm]
+{\Large 分析日期：2026年2月5日}\\[1cm]
+{\large 数据来源：东方财富}\\[3cm]
+\rule{\textwidth}{1pt}\\[0.5cm]
+{\large\itshape 统计上交所所有股票型ETF收盘后持有涨停股和跌停股的金额}\\[0.5cm]
+\rule{\textwidth}{1pt}
+\vfill
+{\large 云碾网络}\\[0.5cm]
+{\normalsize 自动生成报告}
+\end{titlepage}
+
+% 目录
+\tableofcontents
+\newpage
+
+%========================================
+\section{报告摘要}
+%========================================
+
+本报告统计了上交所股票型ETF在2026年2月5日收盘后持有涨停股和跌停股的情况。通过分析84只ETF的持仓数据，筛选出持有涨停股和跌停股的ETF，并按持仓数量和金额进行排序。
+
+\subsection{核心数据}
+
+\begin{table}[htbp]
+\centering
+\begin{tabular}{lc}
+\toprule
+\rowcolor{headercolor}
+\textbf{统计项目} & \textbf{数值} \\
+\midrule
+分析ETF总数 & 84只 \\
+当日涨停股票数量 & 44只 \\
+当日跌停股票数量 & 15只 \\
+\midrule
+持有涨停股的ETF数量 & 20只 \\
+持有跌停股的ETF数量 & 10只 \\
+\midrule
+\textcolor{upcolor}{涨停股总持仓金额} & \textcolor{upcolor}{24.89万元} \\
+\textcolor{downcolor}{跌停股总持仓金额} & \textcolor{downcolor}{17.57万元} \\
+\bottomrule
+\end{tabular}
+\caption{分析数据汇总}
+\end{table}
+
+%========================================
+\section{涨停股持仓分析}
+%========================================
+
+\subsection{涨停股持仓ETF排名（按数量）}
+
+以下ETF持有涨停股数量最多，投资者需关注相关ETF的流动性风险。
+
+\begin{table}[htbp]
+\centering
+\small
+\begin{tabular}{clccc}
+\toprule
+\rowcolor{headercolor}
+\textbf{排名} & \textbf{ETF名称} & \textbf{代码} & \textbf{涨停股数量} & \textbf{金额(万元)} \\
+\midrule
+1 & 1000ETF & 512100 & \textcolor{upcolor}{\textbf{10}} & 3.82 \\
+2 & 500ETF & 510500 & \textcolor{upcolor}{\textbf{7}} & 7.53 \\
+3 & 2000ETF & 560010 & \textcolor{upcolor}{\textbf{4}} & 1.28 \\
+4 & 光伏ETF & 515790 & \textcolor{upcolor}{\textbf{3}} & 4.13 \\
+5 & 证券ETF & 512880 & \textcolor{upcolor}{\textbf{3}} & 2.46 \\
+6 & 煤炭ETF & 515220 & \textcolor{upcolor}{\textbf{3}} & 1.84 \\
+7 & 软件ETF & 512660 & \textcolor{upcolor}{\textbf{3}} & 1.54 \\
+8 & 芯片龙头 & 512200 & \textcolor{upcolor}{\textbf{3}} & 0.55 \\
+9 & 稀土ETF & 515210 & 2 & 0.34 \\
+10 & 军工ETF & 512670 & 1 & 0.34 \\
+\bottomrule
+\end{tabular}
+\caption{涨停股持仓ETF排名（前10名）}
+\end{table}
+
+\subsection{涨停股明细}
+
+本日被ETF持有的主要涨停股票包括：
+
+\begin{table}[htbp]
+\centering
+\small
+\begin{tabular}{llp{8cm}}
+\toprule
+\rowcolor{headercolor}
+\textbf{股票代码} & \textbf{股票名称} & \textbf{被持有ETF} \\
+\midrule
+002291 & 遥望科技 & 1000ETF \\
+601015 & 陕西黑猫 & 1000ETF、煤炭ETF \\
+603103 & 横店影视 & 1000ETF \\
+002506 & 协鑫集成 & 1000ETF、光伏ETF、AIETF、锂电ETF、新能源车、养老ETF \\
+601187 & 厦门银行 & 1000ETF、银行ETF \\
+002985 & 北摩高科 & 1000ETF、军工ETF、软件ETF、影视ETF \\
+000636 & 风华高科 & 500ETF \\
+002945 & 华林证券 & 500ETF、证券ETF、基建ETF、国企改革 \\
+603826 & 坤彩科技 & 500ETF、有色ETF \\
+600683 & 京投发展 & 芯片龙头 \\
+600382 & 广东明珠 & 稀土ETF \\
+601599 & 浙文影业 & 国企ETF \\
+\bottomrule
+\end{tabular}
+\caption{涨停股被持有情况明细}
+\end{table}
+
+%========================================
+\section{跌停股持仓分析}
+%========================================
+
+\subsection{跌停股持仓ETF排名（按数量）}
+
+以下ETF持有跌停股数量最多，可能面临净值下跌压力。
+
+\begin{table}[htbp]
+\centering
+\small
+\begin{tabular}{clccc}
+\toprule
+\rowcolor{headercolor}
+\textbf{排名} & \textbf{ETF名称} & \textbf{代码} & \textbf{跌停股数量} & \textbf{金额(万元)} \\
+\midrule
+1 & 光伏ETF & 515790 & \textcolor{downcolor}{\textbf{7}} & 4.93 \\
+2 & 500ETF & 510500 & \textcolor{downcolor}{\textbf{4}} & 7.42 \\
+3 & 1000ETF & 512100 & \textcolor{downcolor}{\textbf{4}} & 2.23 \\
+4 & 2000ETF & 560010 & \textcolor{downcolor}{\textbf{3}} & 0.85 \\
+5 & 养老ETF & 512580 & \textcolor{downcolor}{\textbf{3}} & 0.18 \\
+6 & 稀土ETF & 515210 & 2 & 1.06 \\
+7 & AIETF & 516160 & 1 & 0.52 \\
+8 & 有色ETF & 512400 & 1 & 0.36 \\
+9 & 锂电ETF & 516850 & 1 & 0.01 \\
+10 & 新能源车 & 516580 & 1 & 0.01 \\
+\bottomrule
+\end{tabular}
+\caption{跌停股持仓ETF排名（前10名）}
+\end{table}
+
+\subsection{跌停股明细}
+
+本日被ETF持有的主要跌停股票包括：
+
+\begin{table}[htbp]
+\centering
+\small
+\begin{tabular}{llp{8cm}}
+\toprule
+\rowcolor{headercolor}
+\textbf{股票代码} & \textbf{股票名称} & \textbf{被持有ETF} \\
+\midrule
+600481 & 双良节能 & 光伏ETF \\
+002518 & 科士达 & 光伏ETF、1000ETF、2000ETF、养老ETF \\
+002865 & 钧达股份 & 光伏ETF、养老ETF \\
+601212 & 白银有色 & 500ETF、有色ETF \\
+601615 & 明阳智能 & 500ETF、AIETF、锂电ETF、新能源车、养老ETF \\
+002716 & 湖南白银 & 1000ETF、2000ETF \\
+000923 & 河钢资源 & 1000ETF、2000ETF、稀土ETF \\
+\bottomrule
+\end{tabular}
+\caption{跌停股被持有情况明细}
+\end{table}
+
+%========================================
+\section{重点ETF分析}
+%========================================
+
+\subsection{宽基指数ETF}
+
+宽基指数ETF由于持仓分散，涨跌停股影响相对有限。
+
+\begin{table}[htbp]
+\centering
+\small
+\begin{tabular}{lccccc}
+\toprule
+\rowcolor{headercolor}
+\textbf{ETF名称} & \textbf{代码} & \textbf{涨停数} & \textbf{涨停金额} & \textbf{跌停数} & \textbf{跌停金额} \\
+\midrule
+50ETF & 510050 & 0 & 0.00 & 0 & 0.00 \\
+300ETF & 510300 & 0 & 0.00 & 0 & 0.00 \\
+500ETF & 510500 & 7 & 7.53 & 4 & 7.42 \\
+1000ETF & 512100 & 10 & 3.82 & 4 & 2.23 \\
+2000ETF & 560010 & 4 & 1.28 & 3 & 0.85 \\
+科创50 & 588000 & 0 & 0.00 & 0 & 0.00 \\
+\bottomrule
+\end{tabular}
+\caption{宽基指数ETF涨跌停持仓（单位：万元）}
+\end{table}
+
+\textbf{分析：}小市值指数ETF（如500ETF、1000ETF、2000ETF）由于成分股更容易出现涨跌停，相关持仓较多。而50ETF、300ETF等大盘蓝筹ETF则基本无涨跌停持仓。
+
+\subsection{行业主题ETF}
+
+行业主题ETF持仓集中，受涨跌停影响更为明显。
+
+\begin{table}[htbp]
+\centering
+\small
+\begin{tabular}{lccccc}
+\toprule
+\rowcolor{headercolor}
+\textbf{ETF名称} & \textbf{代码} & \textbf{涨停数} & \textbf{涨停金额} & \textbf{跌停数} & \textbf{跌停金额} \\
+\midrule
+\textcolor{upcolor}{光伏ETF} & 515790 & 3 & 4.13 & \textcolor{downcolor}{\textbf{7}} & \textcolor{downcolor}{\textbf{4.93}} \\
+证券ETF & 512880 & 3 & 2.46 & 0 & 0.00 \\
+煤炭ETF & 515220 & 3 & 1.84 & 0 & 0.00 \\
+稀土ETF & 515210 & 2 & 0.34 & 2 & 1.06 \\
+AIETF & 516160 & 1 & 0.31 & 1 & 0.52 \\
+\bottomrule
+\end{tabular}
+\caption{行业主题ETF涨跌停持仓（单位：万元）}
+\end{table}
+
+\textbf{分析：}\textcolor{downcolor}{光伏ETF}本日持有跌停股数量最多（7只），需关注新能源板块的风险。证券ETF和煤炭ETF则表现较好，涨停股持仓较多。
+
+%========================================
+\section{投资风险提示}
+%========================================
+
+\subsection{涨停股持仓风险}
+
+\begin{itemize}[leftmargin=2em]
+\item \textbf{流动性风险：}涨停股无法卖出，ETF面临赎回压力时可能产生折价
+\item \textbf{估值风险：}连续涨停可能导致ETF净值与实际价值偏离
+\item \textbf{溢价风险：}部分ETF可能因持有涨停股而产生场内溢价
+\end{itemize}
+
+\subsection{跌停股持仓风险}
+
+\begin{itemize}[leftmargin=2em]
+\item \textbf{净值下跌风险：}跌停股无法及时止损，可能持续拖累ETF净值
+\item \textbf{折价风险：}投资者预期继续下跌可能导致ETF场内折价
+\item \textbf{行业风险：}跌停股集中的行业ETF（如光伏ETF）需特别关注
+\end{itemize}
+
+\subsection{投资建议}
+
+\begin{enumerate}[leftmargin=2em]
+\item 关注持有涨停股较多的ETF（如1000ETF、500ETF），警惕溢价风险
+\item 规避持有跌停股较多的ETF（如光伏ETF），防范进一步下跌
+\item 宽基指数ETF（50ETF、300ETF）受涨跌停影响较小，适合稳健投资
+\item 行业ETF波动较大，建议结合行业基本面综合判断
+\end{enumerate}
+
+%========================================
+\section{附录：数据说明}
+%========================================
+
+\subsection{数据来源}
+\begin{itemize}[leftmargin=2em]
+\item 涨跌停股票数据：东方财富涨停板池/跌停板池
+\item ETF持仓数据：东方财富基金持仓明细
+\item 数据获取时间：2026年2月5日收盘后
+\end{itemize}
+
+\subsection{统计口径}
+\begin{itemize}[leftmargin=2em]
+\item 涨停判断：涨跌幅达到或超过10\%（ST股票5\%）
+\item 跌停判断：涨跌幅达到或超过-10\%（ST股票-5\%）
+\item ETF范围：上交所上市的股票型ETF（代码以5开头），排除债券、货币、商品类ETF
+\item 持仓金额：基于最新披露的持仓数据计算
+\end{itemize}
+
+\subsection{免责声明}
+
+本报告仅供参考，不构成任何投资建议。投资者应根据自身情况独立判断，自行承担投资风险。数据可能存在延迟或误差，请以官方披露为准。
+
+\vspace{1cm}
+\begin{center}
+\rule{0.5\textwidth}{0.5pt}\\[0.3cm]
+{\small 报告生成时间：2026年2月5日}\\
+{\small 云碾网络 · 数据分析团队}
+\end{center}
+
+\end{document}
